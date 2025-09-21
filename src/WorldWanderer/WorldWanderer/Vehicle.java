@@ -37,9 +37,4 @@ public class Vehicle {
     public String getTransmission() { return transmission; }
     public String getType() { return type; }
     public double getVehiclePrice() { return vehiclePrice; }
-
-    // Calculate rental price based on user's destination and duration
-    public double calculateRentalCost(int days) {
-        return 0;
-    }
 }
