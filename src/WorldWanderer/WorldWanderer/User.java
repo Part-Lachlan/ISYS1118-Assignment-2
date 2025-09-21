@@ -9,6 +9,8 @@ public class User {
     private String password;
     private String email;
     private int userID;
+    private Itinerary itinerary;
+    private int totalCost;
 
     public User() {}
 
@@ -27,6 +29,11 @@ public class User {
     public String getPassword() { return password; }
     public String getEmail() { return email; }
     public int getUserID() { return userID; }
+    public Itinerary getItinerary() { return itinerary; }
+
+    public int getTotalCost(Itinerary itinerary) {
+        return totalCost; 
+    }
 
     @Override
     public String toString() {
