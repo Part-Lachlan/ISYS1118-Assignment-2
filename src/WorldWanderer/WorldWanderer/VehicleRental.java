@@ -2,37 +2,26 @@ package WorldWanderer;
 
 // Author: Jose Ortega / 100%
 
-public class VehicleRental{
-    private int vehicleRentID;
-    private String startDate;
-    private String endDate;
-    private String destination;
+import java.util.List;
+import java.util.ArrayList;
 
-    public VehicleRental(int rentID, String startDate, String endDate, String destination) {
-        this.vehicleRentID = rentID;
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.destination = destination;
+public class VehicleRental{
+
+    // Fetches external vehicle data based on destination
+    public List<Vehicle> getVehicleData(String destination) {
+        List<Vehicle> vehicleList = null;
+        return vehicleList;
     }
 
-    public int getVehicleRentID() { return vehicleRentID; }
-    public String getStartDate() { return startDate; }
-    public String getEndDate() { return endDate; }
-    public String getDestination() { return destination; }
-
-    public Vehicle getVehicleData() {
-        Vehicle v = new Vehicle();
-        return v;
+    // Calculate price from user's rented vehicle(s)
+    public double calcTotalCost(ArrayList<Vehicle> Vehicle) {
+        double totalCost = 0;
+        return totalCost;
     }
 
     // Calculate the difference of the registered start and end date.
-    public static double calcVehicleRentDuration(String startDate, String endDate) {
-        return 0;
-    }
-
-    public double calcTotalCost(Vehicle vehicle, String destination) {
-        double totalCost = 0;
-        calcVehicleRentDuration(getStartDate(), getEndDate());
-        return totalCost;
+    public static int calcVehicleRentDuration(String startDate, String endDate) {
+        int totalDuration = 0;
+        return totalDuration;
     }
 }
