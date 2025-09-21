@@ -195,3 +195,80 @@ class FareOption {
 		return refundable; 
 	}
 }
+
+enum BookingStatus { PENDING, CONFIRMED, CANCELLED }
+class FlightBooking {
+    private String bookingId;
+    private BookingStatus status = BookingStatus.PENDING;
+    private User user;            
+    private Itinerary itinerary;  
+    private Payment payment;      
+    public void confirm(Payment p) {
+        this.payment = p;
+        this.status = BookingStatus.CONFIRMED;
+    }
+    public void cancel() {
+        this.status = BookingStatus.CANCELLED;
+    }
+    public String getBookingId() { 
+		return bookingId; 
+	}
+    public void setBookingId(String bookingId) { 
+		this.bookingId = bookingId; 
+	}
+    public BookingStatus getStatus() { 
+		return status; 
+	}
+    public void setStatus(BookingStatus status) { 
+		this.status = status; 
+	}
+    public User getUser() { 
+		return user; 
+	}
+    public void setUser(User user) { 
+		this.user = user; 
+	}
+    public Itinerary getItinerary() { 
+		return itinerary; 
+	}
+    public void setItinerary(Itinerary itinerary) { 
+		this.itinerary = itinerary; 
+	}
+    public Payment getPayment() { 
+		return payment; 
+	}
+}
+
+
+enum PaymentStatus { INITIATED, AUTHORISED, CAPTURED, FAILED }
+class Payment {
+    private String paymentId;
+    private Price amount;
+    private PaymentStatus status = PaymentStatus.INITIATED;
+    public boolean authorise() {
+        this.status = PaymentStatus.AUTHORISED;
+        return true;
+    }
+    public boolean capture() {
+        this.status = PaymentStatus.CAPTURED;
+        return true;
+    }
+    public String getPaymentId() { 
+		return paymentId; 
+	}
+    public void setPaymentId(String paymentId) { 
+		this.paymentId = paymentId; 
+	}
+    public Price getAmount() { 
+		return amount; 
+	}
+    public void setAmount(Price amount) { 
+		this.amount = amount; 
+	}
+    public PaymentStatus getStatus() { 
+		return status; 
+	}
+    public void setStatus(PaymentStatus status) { 
+		this.status = status; 
+	}
+}
