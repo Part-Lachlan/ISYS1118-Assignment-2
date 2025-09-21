@@ -1,6 +1,6 @@
 package WorldWanderer;
 
-// Author: Jose Ortega / 100%
+// Author: Jose Ortega (s3779997) / 100%
 
 import java.util.List;
 import java.util.ArrayList;

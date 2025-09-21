@@ -1,5 +1,7 @@
 package WorldWanderer;
 
+// Author: Jose Ortega (s3779997) / 100%
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;

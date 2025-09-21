@@ -30,8 +30,7 @@ public class User {
 
     @Override
     public String toString() {
-        System.out.println(username + " " + name + " " + surname + " " + password);
-        return null;
+        return name + " " + surname + " " + password + " " + email + " " + userID;
     }
 
 }
