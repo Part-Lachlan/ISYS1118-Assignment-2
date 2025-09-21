@@ -1,5 +1,7 @@
 package WorldWanderer;
 
+// Author: Jose Ortega (s3779997) / 100%
+
 public class User {
     private String username;
     private String name;
